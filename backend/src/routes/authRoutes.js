@@ -29,7 +29,7 @@ router.post(
     if (req.isAuthenticated()) return next();
     res.status(401).json({ message: "Unauthorized" });
   },
-  setup2FA
+  setup2FA,
 );
 //Verify route
 router.post(
@@ -38,7 +38,7 @@ router.post(
     if (req.isAuthenticated()) return next();
     res.status(401).json({ message: "Unauthorized" });
   },
-  verify2FA
+  verify2FA,
 );
 
 //Reset route
@@ -48,7 +48,7 @@ router.post(
     if (req.isAuthenticated()) return next();
     res.status(401).json({ message: "Unauthorized" });
   },
-  reset2FA
+  reset2FA,
 );
 
 export default router;
